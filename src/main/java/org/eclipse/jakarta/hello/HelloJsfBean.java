@@ -11,7 +11,7 @@ import java.io.Serializable;
 @RequestScoped
 public class HelloJsfBean implements Serializable {
     @Inject
-    //@ManagedProperty("#{helloSpringBean}")
+    @ManagedProperty("#{helloSpringBean}")
     transient private HelloSpringBean springBean;
     public HelloSpringBean getSpringBean() { return springBean; }
     public void setSpringBean(HelloSpringBean springBean) { this.springBean = springBean; }
