@@ -10,4 +10,10 @@ public class SpringCoreConfig {
     public HelloSpringBean helloSpringBean() {
         return new HelloSpringBeanImpl();
     }
+
+    //@Bean
+    @Bean(name={"helloSpringBean"})
+    public HelloSpringBean helloSpringBeanNamed() {
+        return new HelloSpringBeanImpl();
+    }
 }
