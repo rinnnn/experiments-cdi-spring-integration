@@ -14,10 +14,10 @@ public class HelloJsfBean implements Serializable {
     //@ManagedProperty("#{helloSpringBean}")
     transient private HelloSpringBean springBean;
     public HelloSpringBean getSpringBean() { return springBean; }
-    public void setSpringBean(HelloSpringBean config) { this.springBean = springBean; }
+    public void setSpringBean(HelloSpringBean springBean) { this.springBean = springBean; }
 
     public String getFancyGreeting() {
         //return "this one works";
         return springBean.getFancyGreeting();
-    };
+    }
 }
