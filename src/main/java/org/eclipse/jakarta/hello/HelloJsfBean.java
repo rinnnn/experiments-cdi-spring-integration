@@ -10,14 +10,14 @@ import java.io.Serializable;
 @Named("helloJsfBean")
 @RequestScoped
 public class HelloJsfBean implements Serializable {
-    @Inject
+    //@Inject
     //@ManagedProperty("#{helloSpringBean}")
     transient private HelloSpringBean springBean;
     public HelloSpringBean getSpringBean() { return springBean; }
     public void setSpringBean(HelloSpringBean springBean) { this.springBean = springBean; }
 
     public String getFancyGreeting() {
-        //return "this one works";
-        return springBean.getFancyGreeting();
+        return "this one works";
+        //return springBean.getFancyGreeting();
     }
 }
